@@ -1,0 +1,26 @@
+#Start
+@set YardState="AfterGame"
+@save
+@hideAll
+@hideUI MiniGame
+@back Yard id:Location
+@choice Map button:MapButtons/GoToMapButton handler:FreeHandler goto:Map
+@showUI QuestUI
+@char Sakura
+Sakura: "Good. Now you can have it. But don't forget to return it, otherwise I will go mad"
+@set questLog="{questLog} {currentQuest}"
+@set currentQuest="Go to class and meet Rin there."
+@showUI KeyUI
+@set HasKey=true
+@hideChars
+@hidePrinter
+@set YardState="End"
+@save
+@stop
+
+#End
+@hideAll
+@choice handler:FreeHandler button:MapButtons/GoToMapButton goto:Map Map
+@back Yard id:Location
+I need to {currentQuest}
+@stop

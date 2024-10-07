@@ -1,0 +1,14 @@
+@hideAll
+@hidePrinter
+@back Map id:Map
+
+@choice handler:MapHandler button:MapButtons/ToHallButton  goto:Hall.{HallState}
+
+@choice handler:MapHandler button:MapButtons/ToYardButton  goto:Yard
+
+@if HasKey
+    @choice handler:MapHandler button:MapButtons/ToClassButton goto:Class.{ClassState}
+@else
+    @choice handler:MapHandler button:MapButtons/ToClassButtonDisabled goto:Class
+@endIf
+@stop

@@ -1,0 +1,21 @@
+#Start
+@hideAll
+@back Class id:Location
+@char Rin
+@char Player
+Rin: Ok. Let's start learning.
+@hideChars
+@print "Now we are learning math"
+Rin: Ok. Now I got it. Let's go out.
+@set HallState="Final"
+@set ClassState="End"
+@save
+@goto Hall.Final
+@stop
+
+#End
+@hideAll
+@choice handler:FreeHandler button:MapButtons/GoToMapButton goto:Map Map
+@back Class id:Location
+Now key is mine..
+@stop

@@ -1,0 +1,86 @@
+#Start
+@back Hall id:Location
+@char Rin
+Rin: Hello. My name is Rin. Can I get to know you? 
+@input player_name summary:"Enter your name"
+@stop
+@char Player
+Player:  Hello. You can call me {player_name}.
+Rin: {player_name}, ha? I like it.
+@char Rin.Happy
+Rin: {player_name}, I heard you are great in math. Can you help me with my homework? I don't really understand what should I do.
+@choice Ok
+@stop
+Rin: Nice!. You can have key from Sakura. She is on the yard. She has pink hair, you will recognize her.
+@set currentQuest="Find Sakura on the yard."
+
+@hideChars
+@hidePrinter
+@choice handler:FreeHandler button:MapButtons/GoToMapButton goto:Map Map
+@showUI QuestUI
+@set HallState="End"
+@save
+@stop
+
+#End
+@hideAll
+@choice handler:FreeHandler button:MapButtons/GoToMapButton goto:Map Map
+@back Hall id:Location
+I need to {currentQuest}
+@stop
+
+#Final
+@back Hall id:Location
+@char Rin
+@char Sakura
+Sakura: Hay. can I have a key back? I need return it to teacher.
+Rin: Let me do it please.
+
+@choice "Give it Rin" goto:.GiveRin
+@choice "Give it Sakura" goto:.GiveSakura
+@choice "Do it myself" goto:.KeepIt
+@stop
+
+#GiveRin
+@char Rin.Happy
+@char Sakura.Sad
+Sakura: What? Why?
+@hideUI KeyUI
+@set HasKey=false
+@hideChars
+@hidePrinter
+@set questLog=""
+@set currentQuest="do nothing"
+@set HallState="End"
+@save
+@choice handler:FreeHandler button:MapButtons/GoToMapButton goto:Map Map
+@stop
+
+#GiveSakura
+@char Sakura.Happy
+@char Rin.Sad
+Rin: Oh, I wanted to see teacher.
+@hideUI KeyUI
+@set HasKey=false
+@hideChars
+@hidePrinter
+@set questLog=""
+@set currentQuest="do nothing"
+@set HallState="End"
+@save
+@choice handler:FreeHandler button:MapButtons/GoToMapButton goto:Map Map
+@stop
+
+#KeepIt
+@char Rin.Sad
+@char Sakura.Sad
+Sakura: What? Why?
+Rin: Oh, I wanted to see teacher.
+@hideChars
+@hidePrinter
+@set questLog=""
+@set currentQuest="do nothing"
+@set HallState="End"
+@save
+@choice handler:FreeHandler button:MapButtons/GoToMapButton goto:Map Map
+@stop

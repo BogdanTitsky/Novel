@@ -1,0 +1,21 @@
+; English <en> to Ukrainian <uk> localization document for `Yard` naninovel script
+
+# 1f21d21f
+; Sakura: "Ha?"
+Sakura: — Ха?
+
+# 695ae666
+; Player: Hello, are you Sakura? Can I have a key from the class? I need it for help my friend with homework
+Player: Доброго дня, ти Сакура? Чи можу я отримати ключ від класу? Мені це потрібно, щоб допомогти моєму другу з домашнім завданням
+
+# 1c349a7
+; Sakura: If you win this card game you will have it. But don't forget return it.
+Sakura: Якщо ви виграєте цю карткову гру, вона у вас буде. Але не забудьте його повернути.
+
+# 1aa2f0c7
+; @choice Ok goto:.StartGame
+@choice Гаразд goto:.StartGame
+
+# b071b6c8
+; @choice No goto:.TakeChallenge
+@choice Ні goto:.TakeChallenge

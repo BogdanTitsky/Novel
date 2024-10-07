@@ -1,0 +1,16 @@
+; English <en> to Ukrainian <uk> localization document for `Class` naninovel script
+
+# 2be8dbac
+; Rin: Ok. Let's start learning.
+
+# 2841fbd8
+; @print "Now we are learning math"
+
+# 885f0f80
+; Rin: Ok. Now I got it. Let's go out.
+
+# 2eaca13
+; @choice handler:FreeHandler button:MapButtons/GoToMapButton goto:Map Map
+
+# 137cc72e
+; Now key is mine..

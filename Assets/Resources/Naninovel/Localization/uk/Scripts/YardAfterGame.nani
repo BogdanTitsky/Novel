@@ -1,0 +1,15 @@
+; English <en> to Ukrainian <uk> localization document for `YardAfterGame` naninovel script
+
+# 86f4fa3e
+; @choice Map button:MapButtons/GoToMapButton handler:FreeHandler goto:Map
+
+# 77e9744b
+; Sakura: "Good. Now you can have it. But don't forget to return it, otherwise I will go mad"
+Sakura: "Добре. Тепер ти можеш забрати його. Але не забудь повернути, бо я збожеволію."
+
+# 2eaca13
+; @choice handler:FreeHandler button:MapButtons/GoToMapButton goto:Map Map
+@choice handler:FreeHandler button:MapButtons/GoToMapButton goto:Map Мапа
+
+# 49fea9d6
+; I need to {currentQuest}

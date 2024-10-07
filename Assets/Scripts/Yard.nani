@@ -1,0 +1,26 @@
+@goto YardAfterGame.End if:YardState=="End"
+@goto YardAfterGame.Start if:YardState=="AfterGame"
+@hideAll
+@set questLog="{questLog} {currentQuest}"
+@set currentQuest="Get key from Sakura."
+
+@back Yard id:Location
+@showUI QuestUI
+@char Sakura
+Sakura: "Ha?"
+@char Player
+Player: Hello, are you Sakura? Can I have a key from the class? I need it for help my friend with homework
+@set YardState="TakeChallenge"
+
+#TakeChallenge
+@back Yard id:Location
+Sakura: If you win this card game you will have it. But don't forget return it.
+@choice Ok goto:.StartGame
+@choice No goto:.TakeChallenge
+@stop
+
+#StartGame
+@hideUI QuestUI
+@hideAll
+@showUI MiniGame
+@stop

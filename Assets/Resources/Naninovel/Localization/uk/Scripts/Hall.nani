@@ -1,0 +1,74 @@
+; English <en> to Ukrainian <uk> localization document for `Hall` naninovel script
+
+# 23bc16f5
+; Rin: Hello. My name is Rin. Can I get to know you? 
+Rin: Привіт. Мене звуть Рін. Можна з тобою познайомитися? 
+
+# 1cf4c7ab
+; @input player_name summary:"Enter your name"
+@input player_name summary:"Введіть своє ім'я"
+
+# c9f11cb7
+; Player:  Hello. You can call me {player_name}.
+Player: Привіт. Ви можете називати мене {player_name}.
+
+# 6dd80933
+; Rin: {player_name}, ha? I like it.
+Rin: {player_name}, так? Мені подобається.
+
+# 17644647
+; Rin: {player_name}, I heard you are great in math. Can you help me with my homework? I don't really understand what should I do.
+Rin: {player_name}, я чула, що ти добре знаєш математику. Можеш допомогти мені з домашнім завданням? Я не дуже розумію, що мені треба робити.
+
+# f8e90b6c
+; @choice Ok
+@choice Ok
+
+# 2b5a6af1
+; Rin: Nice!. You can have key from Sakura. She is on the yard. She has pink hair, you will recognize her.
+Rin: Чудово! Можеш взяти ключі у Сакури. Вона на подвір'ї. У неї рожеве волосся, ти її впізнаєш.
+
+# 2eaca13
+; @choice handler:FreeHandler button:MapButtons/GoToMapButton goto:Map Map
+
+# 2eaca13
+; @choice handler:FreeHandler button:MapButtons/GoToMapButton goto:Map Map
+
+# 49fea9d6
+; I need to {currentQuest}
+
+# dd630475
+; Sakura: Hay. can I have a key back? I need return it to teacher.
+
+# b0cbd2a
+; Rin: Let me do it please.
+
+# 29b31a91
+; @choice "Give it Rin" goto:.GiveRin
+
+# 8d18a1fd
+; @choice "Give it Sakura" goto:.GiveSakura
+
+# 9c1a18c2
+; @choice "Do it myself" goto:.KeepIt
+
+# ba883ef6
+; Sakura: What? Why?
+
+# 2eaca13
+; @choice handler:FreeHandler button:MapButtons/GoToMapButton goto:Map Map
+
+# 8b026077
+; Rin: Oh, I wanted to see teacher.
+
+# 2eaca13
+; @choice handler:FreeHandler button:MapButtons/GoToMapButton goto:Map Map
+
+# ba883ef6
+; Sakura: What? Why?
+
+# 8b026077
+; Rin: Oh, I wanted to see teacher.
+
+# 2eaca13
+; @choice handler:FreeHandler button:MapButtons/GoToMapButton goto:Map Map

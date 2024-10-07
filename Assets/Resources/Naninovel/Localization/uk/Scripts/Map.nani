@@ -1,0 +1,13 @@
+; English <en> to Ukrainian <uk> localization document for `Map` naninovel script
+
+# e79b6ecf
+; @choice handler:MapHandler button:MapButtons/ToHallButton  goto:Hall.{HallState}
+
+# a508f01
+; @choice handler:MapHandler button:MapButtons/ToYardButton  goto:Yard
+
+# 128b72ad
+;     @choice handler:MapHandler button:MapButtons/ToClassButton goto:Class.{ClassState}
+
+# 58daaf88
+;     @choice handler:MapHandler button:MapButtons/ToClassButtonDisabled goto:Class
